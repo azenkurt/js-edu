@@ -9,6 +9,13 @@ module.exports = function getTimeForEducation(
     knowsProgramming = true,
     config = {family: 4}
     ) {
-      return 0;
+      let weeks = 0;
+      let know = 0;
+      let maxCount = knowsProgramming?800:1300;
+      while (know < maxCount) {
+        know+=config[focus];
+        weeks += 1;
+      }
+      return weeks;
   };
   
